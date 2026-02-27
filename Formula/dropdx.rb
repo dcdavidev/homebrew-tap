@@ -5,21 +5,21 @@
 class Dropdx < Formula
   desc "dropdx CLI"
   homepage "https://github.com/dropdx/dropdx"
-  version "0.2.0"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dropdx/dropdx/releases/download/v0.2.0/dropdx_darwin_amd64.tar.gz"
-      sha256 "fbfc3bd50bc77859d4258763f017e62c761caa46c7828a0b2e187cfd18b5d8fd"
+      url "https://github.com/dropdx/dropdx/releases/download/v0.3.1/dropdx_darwin_amd64.tar.gz"
+      sha256 "b10ef07064365bd7b3c97027b338977aa9960665ba5bf0f143adb787397f008c"
 
       define_method(:install) do
         bin.install "dropdx"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dropdx/dropdx/releases/download/v0.2.0/dropdx_darwin_arm64.tar.gz"
-      sha256 "1e0281c22f6474ec40f56e6cdaf52dcabca652c141fb5ba5730443150305457a"
+      url "https://github.com/dropdx/dropdx/releases/download/v0.3.1/dropdx_darwin_arm64.tar.gz"
+      sha256 "3d620e3242af1cc2439eb28768baa19e4c45885ee57264a44c43a0dbee7af6ab"
 
       define_method(:install) do
         bin.install "dropdx"
@@ -29,15 +29,15 @@ class Dropdx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dropdx/dropdx/releases/download/v0.2.0/dropdx_linux_amd64.tar.gz"
-      sha256 "2e6e0ce8941ac07c41af82b2717f8b93ee52dca5511b650b80ad8f1a31f646eb"
+      url "https://github.com/dropdx/dropdx/releases/download/v0.3.1/dropdx_linux_amd64.tar.gz"
+      sha256 "2ce529c120895dcb3452d0ba7f0e3cc51ed27b18d788023cc3c8a05cff0cb120"
       define_method(:install) do
         bin.install "dropdx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dropdx/dropdx/releases/download/v0.2.0/dropdx_linux_arm64.tar.gz"
-      sha256 "536854f0dacc110312a2625ccdd1147094fac44c726878d9858b2bb959ca4e04"
+      url "https://github.com/dropdx/dropdx/releases/download/v0.3.1/dropdx_linux_arm64.tar.gz"
+      sha256 "656e0f433f7e60d44041c78b4f4781a0c1ed6d438139f6420e70d29b52bc8330"
       define_method(:install) do
         bin.install "dropdx"
       end
