@@ -5,21 +5,21 @@
 class BastionCli < Formula
   desc "Bastion CLI"
   homepage "https://github.com/dcdavidev/bastion"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dcdavidev/bastion/releases/download/v0.5.0/bastion_darwin_amd64.tar.gz"
-      sha256 "c512cc4756a5a8681276df3ca2650867715c564436c042e5c96d69478e91f8df"
+      url "https://github.com/dcdavidev/bastion/releases/download/v0.5.1/bastion_darwin_amd64.tar.gz"
+      sha256 "94dfd74187c3476b38e2447d73a3758bc486cd597d357b13d582ceb85826da2a"
 
       define_method(:install) do
         bin.install "bastion-cli" => "bastion"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dcdavidev/bastion/releases/download/v0.5.0/bastion_darwin_arm64.tar.gz"
-      sha256 "d10105e6a8790b73b5e9b9970c26407885505103a31e1c41d1cbe071f7c977e7"
+      url "https://github.com/dcdavidev/bastion/releases/download/v0.5.1/bastion_darwin_arm64.tar.gz"
+      sha256 "ee2642e55fd202e3784d4af7dde12b2f84e7f05edf169f509b2ec90f1371869e"
 
       define_method(:install) do
         bin.install "bastion-cli" => "bastion"
@@ -29,15 +29,15 @@ class BastionCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dcdavidev/bastion/releases/download/v0.5.0/bastion_linux_amd64.tar.gz"
-      sha256 "6c7f5c42d5ff3a45e5361efd550ec6c36fc9b34f24578333958ad22ef1a72f68"
+      url "https://github.com/dcdavidev/bastion/releases/download/v0.5.1/bastion_linux_amd64.tar.gz"
+      sha256 "5494bf689b9954595ac3eb6b3928fcd6905606adf0d7e93d6567b0bcb899598d"
       define_method(:install) do
         bin.install "bastion-cli" => "bastion"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dcdavidev/bastion/releases/download/v0.5.0/bastion_linux_arm64.tar.gz"
-      sha256 "05be4418abb4495b9c54f5a1c71e071ebb6c4ed0a28294cf105c0df333df1989"
+      url "https://github.com/dcdavidev/bastion/releases/download/v0.5.1/bastion_linux_arm64.tar.gz"
+      sha256 "0c86952e7ba9e486bbf374b02376f75e4358de8f8e0553abd861d7fcebc4efdb"
       define_method(:install) do
         bin.install "bastion-cli" => "bastion"
       end
